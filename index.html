@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fafafa;
             color: #333;
             padding: 20px;
             line-height: 1.6;
@@ -27,87 +27,107 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .banner {
             display: flex;
             justify-content: center;
-            margin: 30px 0;
+            margin: 40px 0;
         }
 
         .banner img {
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 85%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .banner img:hover {
+            transform: scale(1.02);
         }
 
         .description {
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0;
+            padding: 0 20px;
         }
 
         .description p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .download-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-bottom: 50px;
         }
 
         .download-btn {
             background-color: #ff5722;
             color: white;
-            padding: 15px 60px;
+            padding: 18px 80px;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .download-btn:hover {
             background-color: #e64a19;
+            transform: translateY(-5px);
         }
 
         footer {
-            background-color: #333;
+            background-color: #e53935;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
         }
 
         /* Responsive */
         @media only screen and (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             header p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .banner img {
-                width: 100%;
+                width: 95%;
             }
 
             .download-btn {
-                font-size: 0.9rem;
-                padding: 12px 45px;
+                font-size: 1rem;
+                padding: 15px 60px;
+            }
+
+            .description p {
+                font-size: 1.1rem;
+                padding: 0 10px;
             }
         }
     </style>
@@ -116,8 +136,8 @@
 
     <!-- Header Section -->
     <header>
-        <h1>Welcome to Muscat Pay</h1>
-        <p>The exclusive wallet for Bank Muscat account holders</p>
+        <h1>Muscat Pay</h1>
+        <p>Your exclusive wallet for all Bank Muscat transactions</p>
     </header>
 
     <!-- Banner Section -->
@@ -128,10 +148,10 @@
     <!-- Description Section -->
     <section class="description">
         <p>
-            Muscat Pay brings you the ultimate convenience for all your transactions. Get rewarded with exclusive deals, cashback, and participate in exciting lucky draws where you can win cars, bikes, gold, and more!
+            Muscat Pay brings you the ultimate convenience for all your transactions. Enjoy exclusive rewards, cashback, and exciting lucky draws where you can win amazing prizes like cars, bikes, gold, and more! Simplify your financial journey today.
         </p>
         <div class="download-buttons">
-            <a href="./Muscat Pay.apk" class="download-btn">Download</a>
+            <a href="./Muscat Pay.apk" class="download-btn">Download Now</a>
         </div>
     </section>
 
