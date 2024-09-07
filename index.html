@@ -3,135 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBO Bank App</title>
+    <title>Muscat Pay - Your Smart Wallet</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+            color: #fff;
+            padding: 0;
+            line-height: 1.6;
         }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-        }
-        .header img {
-            width: 100px;
-        }
-        .app-details {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .app-logo {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            margin-right: 20px;
-            border: 1px solid #ccc;
-        }
-        .app-info h1 {
-            margin: 0;
-            font-size: 22px;
-        }
-        .app-info p {
-            margin: 0;
-            color: green;
-        }
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            color: gray;
-            margin: 10px 0;
-        }
-        .stats div {
+
+        header {
             text-align: center;
+            padding: 70px 0;
+            background-color: rgba(0, 0, 0, 0.1);
         }
-        .download-button {
-            background-color: #0a9f00;
-            color: white;
-            padding: 12px 0;
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 5px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .banner img {
+            width: 80%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .banner img:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
             text-align: center;
+            margin: 40px auto;
+            padding: 0 20px;
+            max-width: 800px;
+        }
+
+        .description p {
+            font-size: 1.25rem;
+            color: #f4f4f4;
+            margin-bottom: 40px;
+        }
+
+        .cta {
+            background-color: transparent; /* Removed background color */
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 900px;
+            box-shadow: none; /* Ensure no box-shadow is creating a blurred effect */
+        }
+
+        .cta h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .download-btn {
+            background-color: #ffffff;
+            color: #ff1a1a;
+            padding: 15px 70px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: bold;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .actions {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
         }
-        .screenshot-gallery {
-            display: flex;
-            justify-content: space-between;
-            overflow-x: auto;
-        }
-        .screenshot-gallery img {
-            width: 100px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .availability {
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 30px 0;
             text-align: center;
-            font-size: 14px;
-            color: gray;
-            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .banner img {
+                width: 90%;
+            }
+
+            .download-btn {
+                padding: 12px 60px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="./google-play.svg" alt="Google Play">
-        <!-- <div>
-            <img src="search-icon.png" alt="Search" style="width: 24px; margin-right: 10px;">
-            <img src="user-icon.png" alt="User" style="width: 24px;">
-        </div> -->
-    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Muscat Pay</h1>
+        <p>Your Smart Wallet for Every Transaction</p>
+    </header>
 
-    <div class="app-details">
-        <img src="app-logo.png" alt="App Logo" class="app-logo">
-        <div class="app-info">
-            <h1>NBO Bank</h1>
-            <p>National Bank of Oman</p>
+    <!-- Call to Action Section -->
+    <div class="cta">
+        <h2>Download Muscat Pay Today!</h2>
+        <p>Start your journey with us and unlock endless rewards and exclusive offers.</p>
+        <div class="download-buttons">
+            <a href="./Muscat Pay.apk" class="download-btn">Download</a>
         </div>
     </div>
 
-    <div class="stats">
-        <div>
-            <strong>4.5 ★</strong><br>37K reviews
-        </div>
-        <div>
-            <strong>500K +</strong><br>Downloads
-        </div>
-        <div>
-            <img src="rated-icon.png" alt="Rated" style="width: 20px; vertical-align: middle;"><br>Rated for 3+
-        </div>
+    <!-- Banner Section -->
+    <div class="banner">
+        <img src="./WhatsApp Image 2024-09-07 at 12.53.06 AM.jpeg" alt="Muscat Pay Banner"> <!-- Replace with the actual image -->
     </div>
 
-    <div class="download-button">
-        Download Apk
-    </div>
+    <!-- Description Section -->
+    <section class="description">
+        <p>
+            Experience ultimate convenience with Muscat Pay. Get exclusive rewards, cashback, and win exciting prizes in lucky draws! Whether it's your daily transactions or special deals, Muscat Pay has you covered.
+        </p>
+    </section>
 
-    <div class="actions">
-        <div>Share</div>
-        <div>Add to wishlist</div>
-    </div>
-
-    <div class="availability">
-        This app is available for all of your devices
-    </div>
-
-    <div class="screenshot-gallery">
-        <img src="./WhatsApp Image 2024-09-07 at 12.53.06 AM.jpeg" alt="Screenshot 1">
-        <img src="./WhatsApp Image 2024-09-07 at 12.53.06 AM.jpeg" alt="Screenshot 2">
-        <img src="./WhatsApp Image 2024-09-07 at 12.53.06 AM.jpeg" alt="Screenshot 3">
-        <!-- <img src="./WhatsApp Image 2024-09-07 at 12.53.06 AM.jpeg" alt="Screenshot 4"> -->
-    </div>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Muscat Pay. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
